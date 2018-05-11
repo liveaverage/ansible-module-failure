@@ -1,0 +1,11 @@
+---
+
+
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars_files:
+    - algosec-lab-cred.yml
+  roles:
+    - test

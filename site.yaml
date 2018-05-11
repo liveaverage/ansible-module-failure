@@ -1,0 +1,15 @@
+---
+
+
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars_files:
+    - algosec-lab-cred.yml
+  tasks:
+  - name: Check No_Log and Algosec SDK
+    sdk_check:
+      ip: '10.243.54.4'
+      username: '{{ username }}'
+      password: '{{ password }}'
